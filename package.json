@@ -1,0 +1,15 @@
+{
+  "name": "node-simpler-scheduler",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js",
+    "start:dev": "nodemon ./app.js"
+  },
+  "dependencies": {
+    "node-schedule": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
