@@ -1,17 +1,29 @@
 # Simpler Scheduler
+A nodejs app to help run API test in defined time. For example, you want to run API 1 test in 8AM and API 2 in 2PM everyday.
 
-### Directory Structure
--   `tasks`: Contains all script of your tasks
--   `app.js`: Entry file for starting schedule jobs
+## Directory Structure
+- `collections`: where to put collection of postman
+- `tasks`: Contains all script of your tasks
+- `app.js`: Entry file for starting schedule jobs
 
-### Commands
+## Commands
+
+- To setup, setup `nodejs` and `VScode` in your computer https://docs.google.com/document/d/1QMAMCrodhQBIa4MV4rPFUQ_7OknowmAVyOxCLXT9KV4/edit?usp=sharing 
+
+- Install dependencies:
+
 ```
-npm start // Start jobs
+npm install
+```
 
-// For development
-npm run start:dev // Start jobs & automatically restart the node application when file changes
+- Start running
 
-// to stop
+```
+npm run start:dev
+```
+
+- Stop running
+
+```
 Ctrl + C
-
 ```
