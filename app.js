@@ -7,8 +7,8 @@ const exJob = schedule.scheduleJob('42 * * * *', function(){
   console.log('----Execute a cron job when the minute is 42 (e.g. 19:42, 20:42, etc.).');
 });
 
-const job1 = schedule.scheduleJob('*/5 * * * * *', function(){
-  console.log('----Execute a cron job every 5 seconds');
+const job1 = schedule.scheduleJob('2 15 * * *', function(){
+  console.log('----Execute a cron job 14:58');
   task1.run();
 });
 

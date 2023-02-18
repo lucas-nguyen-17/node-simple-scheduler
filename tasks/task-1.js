@@ -1,14 +1,37 @@
-'use strict';
+"use strict";
+
+const newman = require("newman");
+const moment = require("moment-timezone");
 
 module.exports = (function () {
-  let self = {};
+    let self = {};
 
-  self.run = function () {
-    // TODO: run something here. EX: crawl data from a website
-    console.log('running task 1');
+    self.run = function () {
+        console.log("running task 1");
+        let date_time = moment()
+            .tz("Asia/Ho_Chi_Minh")
+            .format("DD-mm-YYYY_HH-mm-ss");
+        let fileName = `report-${date_time}`;
 
-    return true;
-  };
+        newman.run(
+            {
+                collection: require("../collections/Schedule1.postman_collection.json"),
+                //environment: require("./env/Development.postman_environment.json"),
+                reporters: ["cli", "htmlextra"],
+                reporter: {
+                    htmlextra: {
+                        export: `./report/${fileName}.html`
+                    }
+                }
+            },
+            (err, summary) => {
+                if (err) throw err;
+                console.log(summary.run.failures);
+            }
+        );
 
-  return self;
+        return true;
+    };
+
+    return self;
 })();
