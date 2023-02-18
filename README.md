@@ -3,8 +3,10 @@ A nodejs app to help run API test in defined time. For example, you want to run 
 
 ## Directory Structure
 - `collections`: where to put collection of postman
-- `tasks`: Contains all script of your tasks
+- `tasks`: where to call API
+- `report`: report after running the tests
 - `app.js`: Entry file for starting schedule jobs
+
 
 ## Commands
 

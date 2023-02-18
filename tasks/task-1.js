@@ -16,7 +16,7 @@ module.exports = (function () {
         newman.run(
             {
                 collection: require("../collections/Schedule1.postman_collection.json"),
-                //environment: require("./env/Development.postman_environment.json"),
+                //environment: require("../env/Development.postman_environment.json"),
                 reporters: ["cli", "htmlextra"],
                 reporter: {
                     htmlextra: {
