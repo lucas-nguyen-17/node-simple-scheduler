@@ -3,16 +3,13 @@ const task1 = require('./tasks/task-1');
 const task2 = require('./tasks/task-2');
 
 console.log('init scheduleJob');
-const exJob = schedule.scheduleJob('42 * * * *', function(){
-  console.log('----Execute a cron job when the minute is 42 (e.g. 19:42, 20:42, etc.).');
-});
 
 const job1 = schedule.scheduleJob('2 15 * * *', function(){
   console.log('----Execute a cron job 14:58');
   task1.run();
 });
 
-const job2 = schedule.scheduleJob('0 06 14 * * *', function(){
-  console.log('----Execute a cron job at 2:06 PM');
+const job2 = schedule.scheduleJob('51 * * * *', function(){
+  console.log('----Execute a cron job at min 51');
   task2.run();
 });

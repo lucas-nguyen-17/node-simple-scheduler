@@ -1,12 +1,9 @@
-"use strict";
-
 const newman = require("newman");
 const moment = require("moment-timezone");
 
-module.exports = (function () {
-    let self = {};
-
-    self.run = function () {
+let self = {
+    run: function () {
+        // TODO: run something here. EX: process images
         console.log("running task 1");
         let date_time = moment()
             .tz("Asia/Ho_Chi_Minh")
@@ -31,7 +28,7 @@ module.exports = (function () {
         );
 
         return true;
-    };
+    }
+};
 
-    return self;
-})();
+module.exports = self;
